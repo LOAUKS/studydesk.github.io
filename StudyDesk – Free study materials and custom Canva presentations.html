@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>StudyDesk – Free study materials and custom Canva presentations</title>
+<meta name="description" content="Free notes, reviewers, and cheat sheets for Math, Science, English, History, Filipino, and ICT. Order a custom Canva presentation for your school project.">
+<meta name="theme-color" content="#2f4bff">
+<meta property="og:type" content="website">
+<meta property="og:title" content="StudyDesk – Free study materials and custom Canva presentations">
+<meta property="og:description" content="Study notes for six subjects, plus custom Canva decks for your school projects.">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Figtree:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f3f6fb;--grid:#dde4f0;--surface:#fff;--ink:#14172b;--muted:#555b75;--blue:#2f4bff;--blue-ink:#fff;--hl:#ffe14d;--line:#14172b;--soft:#e6ebff;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#10131f;--grid:#1b2033;--surface:#181c2d;--ink:#eef0fb;--muted:#a3a9c4;--blue:#7d8fff;--blue-ink:#10131f;--hl:#ffe14d;--line:#eef0fb;--soft:#23294a}}
+:root[data-theme="dark"]{--bg:#10131f;--grid:#1b2033;--surface:#181c2d;--ink:#eef0fb;--muted:#a3a9c4;--blue:#7d8fff;--blue-ink:#10131f;--hl:#ffe14d;--line:#eef0fb;--soft:#23294a}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;font:400 1.05rem/1.6 Figtree,system-ui,sans-serif;color:var(--ink);background:var(--bg) linear-gradient(var(--grid) 1px,transparent 1px) 0 0/100% 32px;}
+h1,h2,h3{font-family:"Bricolage Grotesque",Figtree,sans-serif;line-height:1.1;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:2px solid var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;gap:12px;height:58px}
+.logo{font:800 1.35rem "Bricolage Grotesque",sans-serif;text-decoration:none}
+.logo span{background:var(--hl);color:#14172b;padding:0 6px;border-radius:4px}
+nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0;font-weight:500}
+nav ul a{text-decoration:none}nav ul a:hover{text-decoration:underline}
+.btn{display:inline-block;background:var(--blue);color:var(--blue-ink);font:700 1rem Figtree,sans-serif;padding:12px 22px;border:2px solid var(--line);border-radius:10px;box-shadow:4px 4px 0 var(--line);text-decoration:none;cursor:pointer;transition:transform .12s,box-shadow .12s}
+.btn:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--line)}
+.btn.alt{background:var(--surface);color:var(--ink)}
+.hero{padding:64px 0 48px}
+.hero h1{font-size:clamp(2.4rem,7vw,4.6rem);font-weight:800;max-width:13ch;letter-spacing:-.02em}
+.hero h1 mark{background:var(--hl);color:#14172b;padding:0 .12em;border-radius:6px}
+.hero p{max-width:52ch;color:var(--muted);font-size:1.15rem;margin:20px 0 28px}
+.cta{display:flex;flex-wrap:wrap;gap:16px}
+section{padding:48px 0}
+h2{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;margin-bottom:8px}
+.sub{color:var(--muted);margin:0 0 28px;max-width:56ch}
+.tools{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:20px}
+.tab{font:500 .98rem Figtree,sans-serif;background:var(--surface);color:var(--ink);border:2px solid var(--line);border-radius:999px;padding:8px 16px;cursor:pointer}
+.tab[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+.search{flex:1 1 220px;font:inherit;padding:9px 14px;border:2px solid var(--line);border-radius:10px;background:var(--surface);color:var(--ink)}
+.list{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+.item{background:var(--surface);border:2px solid var(--line);border-radius:12px;padding:18px;display:flex;flex-direction:column;gap:10px}
+.item h3{font-size:1.15rem}
+.item p{margin:0;color:var(--muted);font-size:.95rem}
+.meta{display:flex;gap:8px;flex-wrap:wrap;font-size:.85rem}
+.tag{background:var(--soft);padding:2px 10px;border-radius:6px;font-weight:500}
+.item a{margin-top:auto;font-weight:700;color:var(--blue)}
+.empty{grid-column:1/-1;padding:24px;border:2px dashed var(--line);border-radius:12px;text-align:center}
+.band{background:var(--blue);color:var(--blue-ink);border-block:2px solid var(--line)}
+.band .sub{color:inherit;opacity:.9}
+.plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.plan{background:var(--surface);color:var(--ink);border:2px solid var(--line);border-radius:14px;padding:22px;box-shadow:5px 5px 0 var(--line)}
+.plan h3{font-size:1.3rem}
+.price{font:800 2rem "Bricolage Grotesque",sans-serif;margin:8px 0}
+.plan ul{padding-left:18px;margin:10px 0 0;color:var(--muted)}
+.how{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;counter-reset:s;list-style:none;padding:0;margin:0}
+.how li{counter-increment:s;padding-left:46px;position:relative}
+.how li::before{content:counter(s);position:absolute;left:0;top:0;width:34px;height:34px;display:grid;place-items:center;background:var(--hl);color:#14172b;border:2px solid var(--line);border-radius:50%;font:800 1rem "Bricolage Grotesque"}
+.how b{display:block}
+form{background:var(--surface);border:2px solid var(--line);border-radius:14px;padding:24px;display:grid;gap:16px;grid-template-columns:1fr 1fr;box-shadow:5px 5px 0 var(--line)}
+label{display:grid;gap:6px;font-weight:700;font-size:.95rem}
+.full{grid-column:1/-1}
+input,select,textarea{font:400 1rem Figtree,sans-serif;padding:10px 12px;border:2px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);width:100%}
+#note{grid-column:1/-1;margin:0;color:var(--muted);font-size:.92rem}
+footer{border-top:2px solid var(--line);padding:28px 0;color:var(--muted);font-size:.95rem}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bad:#ff9a9a}}:root[data-theme="dark"]{--bad:#ff9a9a}
+.err{color:var(--bad,#b00020);margin:0;font-weight:700}.err:empty{display:none}
+[aria-invalid="true"]{border-color:var(--bad,#b00020)}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.legal{max-width:70ch;padding:48px 20px}.legal h1{font-size:clamp(2rem,5vw,3rem);margin-bottom:6px}.legal h2{font-size:1.4rem;margin:28px 0 6px}.legal .upd{color:var(--muted)}
+.view[hidden],#legal[hidden],#top[hidden],#cb[hidden]{display:none}
+#cb{position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:10;max-width:620px;margin:0 auto;background:var(--surface);border:2px solid var(--line);border-radius:12px;padding:16px;box-shadow:5px 5px 0 var(--line)}
+#cb p{margin:0 0 12px;font-size:.95rem}#cb div{display:flex;gap:10px;flex-wrap:wrap}#cb .btn{padding:8px 16px;box-shadow:3px 3px 0 var(--line)}
+footer a{color:var(--ink);font-weight:500;margin-left:12px}
+@media(max-width:640px){nav ul{display:none}form{grid-template-columns:1fr}.hero{padding-top:40px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><nav>
+<a class="logo" href="#top">Study<span>Desk</span></a>
+<ul><li><a href="#materials">Study materials</a></li><li><a href="#canva">Canva presentations</a></li><li><a href="#request">Order</a></li></ul>
+<a class="btn" href="#request" style="padding:7px 14px;box-shadow:3px 3px 0 var(--line)">Order a presentation</a>
+</nav></div></header>
+
+<main id="top">
+<div class="wrap hero">
+<h1>Study smarter. Present <mark>better.</mark></h1>
+<p>Free notes, reviewers, and practice sets for your subjects. Got a project due? Order a custom Canva presentation made for your topic and your teacher’s requirements.</p>
+<div class="cta"><a class="btn" href="#request">Order a presentation</a></div>
+</div>
+
+<section id="materials"><div class="wrap">
+<h2>Study materials</h2>
+<p class="sub">Pick a subject, or search for a topic. Every file is made to be read in one sitting.</p>
+<div class="tools" id="tabs" role="group" aria-label="Subjects"></div>
+<div class="tools"><input class="search" id="q" type="search" placeholder="Search a topic, e.g. fractions" aria-label="Search materials"></div>
+<div class="list" id="list" aria-live="polite"></div>
+</div></section>
+
+<section id="canva" class="band"><div class="wrap">
+<h2>Custom Canva presentations</h2>
+<p class="sub">Tell me the topic and the deadline. You get an editable Canva deck, ready to present.</p>
+<div class="plans">
+<div class="plan"><h3>Quick deck</h3><div class="price">₱250</div><ul><li>Up to 8 slides</li><li>Clean theme, your content</li><li>Delivered in 2 days</li></ul></div>
+<div class="plan"><h3>Project deck</h3><div class="price">₱450</div><ul><li>Up to 15 slides</li><li>Custom colors, icons, and charts</li><li>1 round of revisions</li></ul></div>
+<div class="plan"><h3>Group or thesis</h3><div class="price">₱800</div><ul><li>Up to 30 slides</li><li>Animations and speaker notes</li><li>2 rounds of revisions</li></ul></div>
+</div></div></section>
+
+<section><div class="wrap">
+<h2>How ordering works</h2><p class="sub">Four steps, no account needed.</p>
+<ol class="how">
+<li><b>Send the details</b>Fill in the form below.</li>
+<li><b>Get a quote</b>I reply within a day with price and timeline.</li>
+<li><b>Review a draft</b>You see the deck and ask for changes.</li>
+<li><b>Receive your file</b>Get a Canva link and a PDF copy.</li>
+</ol>
+</div></section>
+
+<section id="request"><div class="wrap">
+<h2>Order a presentation</h2>
+<p class="sub">Send your request. It opens in your email app, ready to send.</p>
+<form id="f" novalidate>
+<div class="hp" aria-hidden="true"><label>Leave this empty<input id="hp" tabindex="-1" autocomplete="off"></label></div>
+<label>Your name<input id="n" required autocomplete="name"></label>
+<label>Contact (email or Messenger)<input id="c" required></label>
+<label>Subject<select id="s"></select></label>
+<label>Package<select id="p"><option>Quick deck (₱250)</option><option>Project deck (₱450)</option><option>Group or thesis (₱800)</option></select></label>
+<label>Deadline<input id="d" type="date" required></label>
+<label>Grade or year level<input id="g" placeholder="e.g. Grade 10"></label>
+<label class="full">Topic and requirements<textarea id="t" rows="4" required placeholder="Topic, number of slides, rubric, preferred colors…"></textarea></label>
+<div class="full"><button class="btn" type="submit">Send request</button></div>
+<p id="err" class="err full" role="alert"></p>
+<p id="note" role="status"></p>
+</form>
+</div></section>
+</main>
+
+<div id="legal" hidden>
+<article class="legal view" id="v-privacy" hidden>
+<h1>Privacy Policy</h1><p class="upd">Last updated: November 25, 2026</p>
+<p>StudyDesk respects your privacy and follows the Philippine Data Privacy Act of 2012 (RA 10173).</p>
+<h2>What we collect</h2><p>Only what you type into the order form: your name, contact details, subject, deadline, grade level, and project notes. We receive it by email when you send the request.</p>
+<h2>How we use it</h2><p>To reply to your request, quote a price, and deliver your presentation. We do not sell or share your information.</p>
+<h2>Cookies and storage</h2><p>This site does not set tracking cookies. It stores your cookie choice in your browser so the notice does not return.</p>
+<h2>Keeping and deleting data</h2><p>We keep order emails for as long as needed to finish your project and handle revisions. You may ask us to access, correct, or delete your data at any time by emailing the address you used to order.</p>
+<h2>Children</h2><p>If you are under 18, please ask a parent or guardian before ordering.</p>
+<p><a href="#top">Back to home</a></p>
+</article>
+<article class="legal view" id="v-terms" hidden>
+<h1>Terms and Conditions</h1><p class="upd">Last updated: November 25, 2026</p>
+<h2>Study materials</h2><p>Free files are for your personal learning. Do not resell or repost them as your own.</p>
+<h2>Presentation orders</h2><ul><li>A request is not an order until we confirm the price and deadline by message.</li><li>Payment terms are agreed in that message, before work begins.</li><li>Each package includes the revision rounds listed on the site. Extra changes may cost more.</li><li>Delivery is an editable Canva link and a PDF copy.</li></ul>
+<h2>Academic honesty</h2><p>Presentations are a design service and a starting point. You are responsible for following your school’s rules about originality and citing sources.</p>
+<h2>Ownership</h2><p>After full payment, you may use your deck for your school work. We may keep a copy for records. Canva’s own license terms apply to its stock content.</p>
+<h2>Changes</h2><p>We may update these terms. The date above shows the latest version.</p>
+<p><a href="#top">Back to home</a></p>
+</article>
+<article class="legal view" id="v-404" hidden>
+<h1>Page not found</h1><p>That page does not exist or has moved.</p>
+<p><a class="btn" href="#top">Go to the home page</a></p>
+</article>
+</div>
+
+<footer><div class="wrap">StudyDesk · Made for students.<a href="#privacy">Privacy Policy</a><a href="#terms">Terms and Conditions</a></div></footer>
+
+<div id="cb" role="region" aria-label="Cookie notice" hidden>
+<p>This site does not use tracking cookies. We only save your choice here so this notice stays away. See our <a href="#privacy">Privacy Policy</a>.</p>
+<div><button class="btn" id="cb-ok" type="button">Accept</button><button class="btn alt" id="cb-no" type="button">Decline</button></div>
+</div>
+
+<script>
+const EMAIL="yitztatkoi@gmail.com";
+const DATA={
+Math:[["Fractions and decimals reviewer","Reviewer","Grade 6–7","Step-by-step examples and 20 practice items."],["Solving linear equations","Notes","Grade 8","Balance method explained with worked problems."],["Geometry formula sheet","Cheat sheet","Grade 7–10","Area, volume, and angle rules on one page."]],
+Science:[["Cell parts and functions","Notes","Grade 7","Labeled diagrams and a quick quiz."],["Newton’s laws in daily life","Reviewer","Grade 8","Everyday examples for each law."],["Periodic table basics","Cheat sheet","Grade 9","Groups, periods, and trends at a glance."]],
+English:[["Parts of speech made simple","Notes","Grade 6–8","Definitions with sample sentences."],["Essay writing template","Template","Grade 9–12","Intro, body, and conclusion outline."],["Literary devices list","Cheat sheet","Grade 8–10","Metaphor, irony, symbolism, and more."]],
+History:[["Philippine Revolution timeline","Timeline","Grade 6","Key events, people, and dates."],["World War II summary","Notes","Grade 8–10","Causes, major events, and effects."],["Ancient civilizations compared","Reviewer","Grade 7","Side-by-side table of four civilizations."]],
+Filipino:[["Mga bahagi ng pananalita","Reviewer","Grade 7","Mga uri at halimbawa."],["Pagsulat ng talata","Notes","Grade 8","Paano bumuo ng malinaw na talata."],["Mga sanaysay at akda","Notes","Grade 9–10","Buod at aral ng mga pangunahing akda."]],
+ICT:[["Spreadsheet basics","Notes","Grade 7–8","Formulas, cells, and simple charts."],["Safe internet use","Reviewer","Grade 6–9","Passwords, privacy, and spotting scams."],["Design a good slide","Guide","Grade 8–12","Layout, fonts, and color tips for presenting."]]};
+const subs=Object.keys(DATA);let cur="All";
+const tabs=document.getElementById("tabs"),list=document.getElementById("list"),q=document.getElementById("q"),sel=document.getElementById("s");
+["All",...subs].forEach(n=>{const b=document.createElement("button");b.className="tab";b.textContent=n;b.onclick=()=>{cur=n;render()};tabs.append(b)});
+subs.forEach(n=>sel.add(new Option(n)));sel.add(new Option("Other"));
+function esc(s){return s.replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]))}
+function render(){
+ [...tabs.children].forEach(b=>b.setAttribute("aria-pressed",b.textContent===cur));
+ const term=q.value.trim().toLowerCase();let out="";
+ subs.filter(s=>cur==="All"||s===cur).forEach(s=>DATA[s].forEach(([t,ty,lv,ds])=>{
+  if(term&&!(t+ds+s).toLowerCase().includes(term))return;
+  out+=`<article class="item"><div class="meta"><span class="tag">${s}</span><span class="tag">${ty}</span><span class="tag">${lv}</span></div><h3>${esc(t)}</h3><p>${esc(ds)}</p><a href="#" onclick="return false">Open file</a></article>`}));
+ list.innerHTML=out||`<div class="empty">No materials match “${esc(term)}”. Try another word, or <a href="#request">request a topic</a>.</div>`}
+q.oninput=render;render();
+document.getElementById("d").min=new Date().toISOString().slice(0,10);
+const T0=Date.now();
+document.getElementById("f").onsubmit=e=>{e.preventDefault();
+ const v=id=>document.getElementById(id).value;
+ const bad=[],err=document.getElementById("err"),note=document.getElementById("note");note.textContent="";
+ const chk=(id,ok,msg)=>{document.getElementById(id).setAttribute("aria-invalid",String(!ok));if(!ok)bad.push([id,msg])};
+ const c=v("c").trim();
+ chk("n",v("n").trim().length>=2,"Enter your name.");
+ chk("c",/^\S+@\S+\.\S+$/.test(c)||c.length>=4,"Enter an email or Messenger name we can reach.");
+ chk("d",!!v("d")&&v("d")>=document.getElementById("d").min,"Pick a deadline from today onward.");
+ chk("t",v("t").trim().length>=20,"Describe your topic in at least 20 characters.");
+ err.textContent=bad.map(b=>b[1]).join(" ");
+ if(bad.length){document.getElementById(bad[0][0]).focus();return}
+ if(v("hp")||Date.now()-T0<3000)return;
+ let last=0;try{last=+localStorage.getItem("sd_last")||0}catch(x){}
+ if(Date.now()-last<60000){err.textContent="You just sent a request. Wait a minute before sending another.";return}
+ try{localStorage.setItem("sd_last",String(Date.now()))}catch(x){}
+ const body=`Name: ${v("n")}\nContact: ${v("c")}\nSubject: ${v("s")}\nPackage: ${v("p")}\nDeadline: ${v("d")}\nLevel: ${v("g")}\n\nTopic and requirements:\n${v("t")}`;
+ location.href=`mailto:${EMAIL}?subject=${encodeURIComponent("Canva presentation request – "+v("s"))}&body=${encodeURIComponent(body)}`;
+ document.getElementById("note").textContent="Your email app should open with the request filled in. Press send there to finish."};
+const home=document.getElementById("top"),legal=document.getElementById("legal"),base=document.title,ids=new Set([...document.querySelectorAll("[id]")].map(x=>x.id));
+const titles={"v-privacy":"Privacy Policy","v-terms":"Terms and Conditions","v-404":"Page not found"};
+function route(){const h=location.hash.slice(1);
+ const show=h=="privacy"?"v-privacy":h=="terms"?"v-terms":(h&&!ids.has(h))?"v-404":null;
+ document.querySelectorAll(".view").forEach(x=>x.hidden=true);
+ home.hidden=!!show;legal.hidden=!show;
+ if(show){document.getElementById(show).hidden=false;document.title=titles[show]+" – StudyDesk";window.scrollTo(0,0)}
+ else{document.title=base;if(h&&document.getElementById(h))document.getElementById(h).scrollIntoView()}}
+addEventListener("hashchange",route);route();
+const cb=document.getElementById("cb");let ch=null;try{ch=localStorage.getItem("sd_consent")}catch(x){}
+if(!ch)cb.hidden=false;
+["ok","no"].forEach(k=>document.getElementById("cb-"+k).onclick=()=>{try{localStorage.setItem("sd_consent",k)}catch(x){}cb.hidden=true});
+</script>
+</body>
+</html>
